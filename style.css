@@ -1,0 +1,28 @@
+#calendar_wrapper{
+	width: -moz-fit-content;
+	width:fit-content;
+}
+
+#calendar_wrapper #header_wrapper{
+	display:flex;
+	justify-content: space-between;
+	padding: 15px;
+}
+
+#calendar_grid{
+	display:grid;
+	grid-template-columns: repeat(7, 1fr);
+}
+
+#calendar_grid div {
+	padding: 10px;
+	text-align:center;
+	border-radius: 2px;
+}
+#calendar_wrapper #calendar_grid div:not(.weekdays), .navigation{
+	cursor: pointer;
+}
+#calendar_wrapper #calendar_grid .today{
+	background:rgb(94, 136, 208);
+	color:#fff;
+}
