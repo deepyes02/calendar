@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@100;200;300;400;500;800&family=Titillium+Web:wght@200;300;400;600;900&display=swap");
+/*
+font-family: 'Arima Madurai', cursive;
+font-family: 'Titillium Web', sans-serif;
+*/
+* {
+  box-sizing: border-box;
+  line-height: 150%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Titillium Web", sans-serif;
+}
+
+#calendar_wrapper {
+  max-width: 400px;
+  background: rgba(191, 209, 173, 0.212);
+  box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.288);
+  margin: 0px auto;
+  /** dynamic class injected by js on the day**/
+}
+#calendar_wrapper #app_title {
+  text-align: center;
+  padding: 10px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+#calendar_wrapper #header_wrapper {
+  display: flex;
+  background-color: rgba(75, 78, 87, 0.109);
+  align-items: center;
+  justify-content: space-between;
+}
+#calendar_wrapper #header_wrapper #date_display {
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+}
+#calendar_wrapper #header_wrapper div {
+  padding: 20px;
+}
+#calendar_wrapper #header_wrapper .navigation {
+  cursor: pointer;
+}
+#calendar_wrapper #header_wrapper .navigation:hover {
+  background-color: rgba(75, 78, 87, 0.109);
+}
+#calendar_wrapper #weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+#calendar_wrapper #weekdays div {
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: default;
+}
+#calendar_wrapper #calendar_grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+#calendar_wrapper #calendar_grid div {
+  padding: 10px;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  margin: 1px;
+  transition: background-color 0.2 ease;
+}
+#calendar_wrapper #calendar_grid div:hover:not(.today):not(.padding_days) {
+  background-color: rgba(130, 209, 183, 0.781);
+}
+#calendar_wrapper #calendar_grid .padding_days {
+  opacity: 0.5;
+}
+#calendar_wrapper .today {
+  background-color: rgba(75, 78, 87, 0.109);
+  box-shadow: 2px 2px 2px #c9b4b4;
+}
+#calendar_wrapper .selected {
+  background-color: #82d1b7;
+  box-shadow: 2px 2px 2px #c9b4b4;
+}
