@@ -1,7 +1,8 @@
 #calendar_wrapper{
 	width: -moz-fit-content;
 	width:fit-content;
-	background:yellow;
+	background:rgba(191, 209, 173, 0.212);
+	box-shadow: 2px 2px 18px rgba(0, 0, 0, 0.288);
 }
 
 #calendar_wrapper #header_wrapper{
